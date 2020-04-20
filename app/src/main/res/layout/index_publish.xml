@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|center_vertical"
+            android:orientation="horizontal">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:showDividers="middle"
+                android:divider="@drawable/divider"
+                android:layout_marginHorizontal="20dp"
+                android:gravity="center">
+
+            <ImageButton
+                    android:id="@+id/btnPublishImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/style_round_imgbtn"
+                    android:backgroundTint="#04958A"
+                    android:src="@drawable/icon_photo"
+                    android:tint="#ffffff"
+                    android:contentDescription="@null"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="图文"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:showDividers="middle"
+                android:divider="@drawable/divider"
+                android:layout_marginHorizontal="20dp"
+                android:gravity="center">
+
+            <ImageButton
+                    android:id="@+id/btnPublishVideo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/style_round_imgbtn"
+                    android:backgroundTint="#F34434"
+                    android:src="@drawable/icon_videocam"
+                    android:tint="#ffffff"
+                    android:contentDescription="@null"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="视频"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:showDividers="middle"
+                android:divider="@drawable/divider"
+                android:layout_marginHorizontal="20dp"
+                android:gravity="center">
+
+            <ImageButton
+                    android:id="@+id/btnPublishRich"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/style_round_imgbtn"
+                    android:backgroundTint="#9828B0"
+                    android:src="@drawable/icon_description"
+                    android:tint="#ffffff"
+                    android:contentDescription="@null"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="长贴"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+</LinearLayout>

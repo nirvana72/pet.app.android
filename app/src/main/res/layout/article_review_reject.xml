@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="20dp"
+        android:background="#ffffff">
+
+    <TextView
+            android:id="@+id/tvReason1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="与主题无关内容"/>
+
+    <TextView
+            android:id="@+id/tvReason2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="敏感内容"/>
+
+    <TextView
+            android:id="@+id/tvReason3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="排版太乱"/>
+
+    <EditText
+            android:id="@+id/etReason"
+            android:background="@drawable/style_txt_border_round"
+            android:inputType="text"
+            android:hint="其它理由。。。"
+            android:autofillHints="@string/autoFillHints"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:gravity="top"
+            android:layout_height="100dp"/>
+
+    <Button
+            android:id="@+id/btnReject"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            style="@style/btn_error"
+            android:text="拒绝"/>
+
+</LinearLayout>

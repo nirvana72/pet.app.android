@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        package="com.mu78.pethobby">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+            android:allowBackup="true"
+            android:fullBackupContent="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme_Slide"
+            android:name=".MyApplication"
+            tools:replace="android:theme">
+        <!-- 融云相关 -->
+        <provider
+                android:name="androidx.core.content.FileProvider"
+                android:authorities="${applicationId}.FileProvider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/rc_file_path" />
+        </provider>
+        <receiver
+                android:name=".extension.SealNotificationReceiver"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="io.rong.push.intent.MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MESSAGE_CLICKED" />
+                <action android:name="io.rong.push.intent.THIRD_PARTY_PUSH_STATE" />
+            </intent-filter>
+        </receiver>
+        <activity
+                android:name=".LunchActivity"
+                android:theme="@style/LunchTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".index.IndexActivity" android:theme="@style/AppTheme"/>
+        <activity android:name=".common.VideoPlayActivity" android:theme="@style/AppTheme"/>
+        <activity android:name=".article.ArticleViewActivity"/>
+        <activity android:name=".auth.UserInfoActivity"/>
+        <activity android:name=".AboutUsActivity"/>
+        <activity android:name=".auth.LoginActivity"/>
+        <activity android:name=".auth.RegActivity"/>
+        <activity android:name=".auth.UserInfoUpdateActivity" />
+        <activity android:name=".auth.ChangeAvatarActivity" />
+        <activity android:name=".article.PublishImageActivity" android:theme="@style/AppTheme" />
+        <activity android:name=".article.PublishRichActivity" android:theme="@style/AppTheme" />
+        <activity android:name=".article.PublishVideoActivity" android:theme="@style/AppTheme" />
+        <activity android:name=".index.IndexSearchResultActivity" />
+        <activity android:name=".common.TheUserPubsActivity" />
+        <activity android:name=".auth.ChangePasswordActivity" />
+        <activity android:name=".article.ArticleReviewActivity" />
+        <activity
+                android:name=".rongim.ConversationListActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                        android:host="${applicationId}"
+                        android:pathPrefix="/subconversationlist"
+                        android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".rongim.ConversationActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                        android:host="${applicationId}"
+                        android:pathPrefix="/conversation/"
+                        android:scheme="rong" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

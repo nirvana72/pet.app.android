@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="UserInfoCell">
+        <attr name="my_tit" format="string"/>
+        <attr name="my_key" format="string"/>
+        <attr name="my_val" format="string"/>
+        <attr name="my_clickable" format="boolean"/>
+    </declare-styleable>
+</resources>

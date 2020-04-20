@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#ffffff">
+        <ImageView
+                android:id="@+id/ivBackIcon"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/icon_chevron_left"
+                android:tint="#2296F3"
+                android:contentDescription="@null"
+                android:layout_gravity="center"/>
+
+        <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:text="标题"/>
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e2e2e2"/>
+
+    <fragment
+            android:id="@+id/conversation"
+            android:name="io.rong.imkit.fragment.ConversationFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+</LinearLayout>

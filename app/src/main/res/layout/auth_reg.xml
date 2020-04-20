@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="20dp"
+        android:background="#EFEFF4">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp">
+
+        <ImageButton
+                android:id="@+id/btnRegTypeAccount"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/style_round_imgbtn"
+                android:backgroundTint="#757575"
+                android:tint="#ffffff"
+                android:src="@drawable/icon_account_circle"
+                android:layout_marginHorizontal="10dp"
+                android:contentDescription="@null"/>
+
+        <ImageButton
+                android:id="@+id/btnRegTypeEmail"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="@drawable/style_round_imgbtn"
+                android:backgroundTint="#757575"
+                android:tint="#ffffff"
+                android:src="@drawable/icon_mail"
+                android:layout_marginHorizontal="10dp"
+                android:contentDescription="@null"/>
+
+        <ImageButton
+                android:id="@+id/btnRegTypeMobile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="@drawable/style_round_imgbtn"
+                android:backgroundTint="#757575"
+                android:tint="#ffffff"
+                android:src="@drawable/icon_phone"
+                android:layout_marginHorizontal="10dp"
+                android:contentDescription="@null"/>
+
+    </LinearLayout>
+
+    <EditText
+            android:id="@+id/etAccount"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/style_txt_round"
+            android:layout_marginTop="30dp"
+            android:drawableStart="@drawable/icon_account_circle"
+            android:drawableTint="#757575"
+            android:drawablePadding="20dp"
+            android:hint="账号注册"
+            android:autofillHints="@string/autoFillHints"
+            android:inputType="text"/>
+
+    <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/style_txt_round"
+            android:layout_marginTop="30dp"
+            android:drawableStart="@drawable/icon_mail"
+            android:drawableTint="#757575"
+            android:drawablePadding="20dp"
+            android:hint="邮箱注册"
+            android:autofillHints="@string/autoFillHints"
+            android:inputType="textEmailAddress"/>
+
+    <EditText
+            android:id="@+id/etMobile"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/style_txt_round"
+            android:layout_marginTop="30dp"
+            android:drawableStart="@drawable/icon_phone"
+            android:drawableTint="#757575"
+            android:drawablePadding="20dp"
+            android:hint="手机注册"
+            android:autofillHints="@string/autoFillHints"
+            android:inputType="number"/>
+
+    <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/style_txt_round"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/icon_lock"
+            android:drawableTint="#757575"
+            android:drawablePadding="20dp"
+            android:inputType="textPassword"
+            android:hint="密码"
+            android:autofillHints="@string/autoFillHints"
+            />
+
+    <EditText
+            android:id="@+id/etPasswordConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/style_txt_round"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/icon_lock"
+            android:drawableTint="#757575"
+            android:drawablePadding="20dp"
+            android:inputType="textPassword"
+            android:hint="确认密码"
+            android:autofillHints="@string/autoFillHints"
+            />
+
+    <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            style="@style/btn_warning"
+            android:text="注册"
+            />
+
+</LinearLayout>

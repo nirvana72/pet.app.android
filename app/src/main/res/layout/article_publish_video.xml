@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@drawable/divider"
+        android:showDividers="middle"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp">
+
+    <EditText
+            android:id="@+id/etContent"
+            android:background="@drawable/style_txt_border_round"
+            android:inputType="text"
+            android:hint="写点什么吧。。。"
+            android:autofillHints="@string/autoFillHints"
+            android:layout_width="match_parent"
+            android:gravity="top"
+            android:layout_height="100dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/addLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/ivAddVideo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:tint="#a3a3a3"
+                android:background="@drawable/style_image_border_dash"
+                android:contentDescription="@null"/>
+
+        <TextView
+                app:layout_constraintStart_toEndOf="@id/ivAddVideo"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="视频文件最大支持20M以内" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/videoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+        <ImageView
+                android:id="@+id/ivVideoThumb"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:scaleType="centerCrop"
+                android:contentDescription="@null"/>
+
+        <ImageView
+                app:layout_constraintTop_toTopOf="@id/ivVideoThumb"
+                app:layout_constraintBottom_toBottomOf="@id/ivVideoThumb"
+                app:layout_constraintStart_toStartOf="@id/ivVideoThumb"
+                app:layout_constraintEnd_toEndOf="@id/ivVideoThumb"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:tint="#ffffff"
+                android:src="@drawable/icon_play_circle"
+                android:alpha="0.8"
+                android:contentDescription="@null"/>
+
+        <TextView
+                android:id="@+id/tvDuration"
+                app:layout_constraintTop_toBottomOf="@+id/ivVideoThumb"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#757575"
+                android:textSize="13sp"
+                android:text="" />
+
+        <ImageView
+                android:id="@+id/ivDelVideo"
+                app:layout_constraintTop_toBottomOf="@+id/ivVideoThumb"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/icon_cancel"
+                android:tint="#ff0000"
+                android:contentDescription="@null"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            style="@style/btn_success"
+            android:text="发布"/>
+</LinearLayout>

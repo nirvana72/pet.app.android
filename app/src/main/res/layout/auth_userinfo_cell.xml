@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+            android:id="@+id/tvTit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="key"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="20dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="#000000"/>
+
+    <TextView
+            android:id="@+id/tvVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="35dp"/>
+
+    <ImageView
+            android:id="@+id/ivClickable"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/icon_chevron_right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="5dp"
+            android:contentDescription="@null"/>
+
+    <View android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="#e2e2e2"
+          app:layout_constraintBottom_toBottomOf="parent"
+          android:layout_marginStart="20dp"/>
+
+</merge>

@@ -1,0 +1,83 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.mu78.pethobby"
+        minSdkVersion 26
+        targetSdkVersion 28
+        versionCode 4
+        versionName "1.0.5.1"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                // 此处指定生成的apk文件名
+                outputFileName = "pethobby.apk"
+            }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    // for PictureSelector
+    compileOptions{
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.core:core-ktx:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    // Toasty
+    implementation 'com.github.GrenderG:Toasty:1.4.2'
+    // HUD
+    implementation 'com.kaopiz:kprogresshud:1.2.0'
+    // TabLayout
+    implementation 'com.google.android.material:material:1.0.0'
+    // recyclerView
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    // 上拉加载
+    implementation 'com.github.nukc:LoadMoreWrapper:v1.8.3'
+    // okhttp
+    implementation("com.squareup.okhttp3:okhttp:4.1.0")
+    // gson
+    implementation 'com.google.code.gson:gson:2.8.5'
+    // xpopup
+    implementation 'com.lxj:xpopup:1.8.8-x'
+    // picasso load web image url
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    // round image
+    implementation 'com.rishabhharit.roundedimageview:RoundedImageView:0.8.4'
+    // 像册
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.4'
+    // ali oss
+    implementation 'com.aliyun.dpa:oss-android-sdk:2.9.2'
+    // badge
+    implementation 'q.rorbin:badgeview:1.1.3'
+    // alerter
+    implementation 'com.tapadoo.android:alerter:4.0.2'
+    // APP更新
+    implementation 'com.teprinciple:updateapputilsX:2.1.0'
+    // 使安卓支持MOV格式视频文件
+    implementation 'com.devbrackets.android:exomedia:4.3.0'
+
+    api 'cn.rongcloud.sdk:im_kit:2.10.0'
+    //im_kit必须依赖im_lib，所以需要加入对应依赖
+    api 'cn.rongcloud.sdk:im_lib:2.10.0'
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingHorizontal="20dp"
+              android:background="#EFEFF4">
+
+    <EditText
+            android:id="@+id/etAccount"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/style_txt_round"
+            android:layout_marginTop="100dp"
+            android:drawableStart="@drawable/icon_account_circle"
+            android:drawableTint="#757575"
+            android:drawablePadding="20dp"
+            android:hint="账号"
+            android:autofillHints="@string/autoFillHints"
+            android:inputType="text"
+    />
+
+    <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/style_txt_round"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/icon_lock"
+            android:drawableTint="#757575"
+            android:drawablePadding="20dp"
+            android:inputType="textPassword"
+            android:hint="密码"
+            android:autofillHints="@string/autoFillHints"
+    />
+
+    <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            style="@style/btn_success"
+            android:text="确定"
+    />
+
+</LinearLayout>

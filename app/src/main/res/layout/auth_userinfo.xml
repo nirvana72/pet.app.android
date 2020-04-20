@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <com.rishabhharit.roundedimageview.RoundedImageView
+                    android:id="@+id/ivAvatar"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:cornerRadius="1000dp"
+                    android:layout_marginVertical="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                    android:id="@+id/ivChangeAvatar"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/icon_sync"
+                    android:tint="#2296F3"
+                    android:contentDescription="@null"/>
+
+            <ImageView
+                    android:id="@+id/ivSubscrib"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/icon_star_border"
+                    android:tint="#757575"
+                    android:contentDescription="@null"/>
+
+            <ImageView
+                    android:id="@+id/ivChat"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/icon_textsms"
+                    android:tint="#757575"
+                    android:contentDescription="@null"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+                android:id="@+id/tvProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+        />
+
+        <com.mu78.pethobby.auth.UserInfoCell
+                android:id="@+id/cellUid"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingTop="15dp"
+                app:my_tit="用户ID"
+                app:my_key="uid"
+                app:my_val=""
+                app:my_clickable="false"/>
+
+        <com.mu78.pethobby.auth.UserInfoCell
+                android:id="@+id/cellAccount"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingTop="15dp"
+                app:my_tit="账号"
+                app:my_key="account"
+                app:my_val=""
+                app:my_clickable="false"/>
+
+        <com.mu78.pethobby.auth.UserInfoCell
+                android:id="@+id/cellNickname"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingTop="15dp"
+                app:my_tit="昵称"
+                app:my_key="nickname"
+                app:my_val=""
+                app:my_clickable="true"/>
+
+        <com.mu78.pethobby.auth.UserInfoCell
+                android:id="@+id/cellEmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingTop="15dp"
+                app:my_tit="Email"
+                app:my_key="email"
+                app:my_val=""
+                app:my_clickable="true"/>
+
+        <com.mu78.pethobby.auth.UserInfoCell
+                android:id="@+id/cellMobile"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingTop="15dp"
+                app:my_tit="手机号码"
+                app:my_key="mobile"
+                app:my_val=""
+                app:my_clickable="true"/>
+
+        <com.mu78.pethobby.auth.UserInfoCell
+                android:id="@+id/cellChangePwd"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingTop="15dp"
+                app:my_tit="修改密码"
+                app:my_key="password"
+                app:my_val=""
+                app:my_clickable="true"/>
+
+        <com.mu78.pethobby.auth.UserInfoCell
+                android:id="@+id/cellProfile"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingTop="15dp"
+                app:my_tit="简介"
+                app:my_key="profile"
+                app:my_val=""
+                app:my_clickable="true"/>
+
+        <com.mu78.pethobby.auth.UserInfoCell
+                android:id="@+id/cellArticles"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingTop="15dp"
+                app:my_tit="发布动态"
+                app:my_key="articles"
+                app:my_val=""
+                app:my_clickable="true"/>
+
+        <com.mu78.pethobby.auth.UserInfoCell
+                android:id="@+id/cellFans"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingTop="15dp"
+                app:my_tit="粉丝"
+                app:my_key="fans"
+                app:my_val=""
+                app:my_clickable="false"/>
+
+    </LinearLayout>
+
+</ScrollView>
